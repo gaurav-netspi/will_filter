@@ -1,7 +1,7 @@
 <table class='wf_paginator' style="margin-top:10px; margin-bottom:10px;">
     <tr>
         <td style='text-align:left'>
-            <%= paginate(results) %>
+            <%= willfilter_paginate(results) %>
         </td>
         <td style='text-align:right'>
 						<% if results.total_count > 0 %>
