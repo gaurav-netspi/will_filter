@@ -817,9 +817,12 @@ module WillFilter
           recs = process_custom_conditions(recs.all)
           #recs = Kaminari.paginate_array(recs)
           recs = recs.willfilter_paginate(:page => page, :per_page => per_page)
-        end  
+        end
 
         recs = recs.page(page).per(per_page)
+        if defined?(WillPaginate)
+          recs = recs.to_ary
+        end
         recs.wf_filter = self
         recs
       end
