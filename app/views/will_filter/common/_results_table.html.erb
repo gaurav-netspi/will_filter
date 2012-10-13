@@ -4,8 +4,8 @@
             <%= willfilter_paginate(results) %>
         </td>
         <td style='text-align:right'>
-						<% if results.total_count > 0 %>
-							Showing <%= results.offset_value + 1 %> - <%= results.offset_value + results.length %> of <%= results.total_count %>
+						<% if results.count > 0 %>
+							Showing <%= results.offset_value + 1 %> - <%= results.offset_value + results.length %> of <%= results.count %>
 						<% else %>	
 							No results found
 						<% end %>
